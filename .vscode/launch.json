@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "OdooV18",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118/odoo-bin",
+            "console": "integratedTerminal",
+            "args": [
+                "-c",
+                "/home/sugau/Projects/odoo18-dev/odoo.conf",
+                "--limit-time-real",
+                "99999"
+            ]
+        }
+    ]
+}

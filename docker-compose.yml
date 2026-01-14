@@ -1,0 +1,24 @@
+# Use postgres/example user/password credentials
+services:
+  db:
+    image: postgres:15.11
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgresql_password
+      - POSTGRES_USER=odoo
+      - PGDATA= /var/lib/postgresql/data/pgdata/
+    volumes:
+      - /postgres/pgdata:/var/lib/postgresql/data/
+    command: ["-c", "shared_buffers=1024MB", "-c", "max_connections=200"]
+    secrets:
+      - postgresql_password
+    ports:
+      - "5422:5432"
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 2GB
+secrets:
+  postgresql_password:
+    file: odoo_pg_pass
