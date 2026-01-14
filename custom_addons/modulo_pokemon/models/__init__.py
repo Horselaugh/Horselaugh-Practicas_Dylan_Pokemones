@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import pokemon_modulo
+from . import entrenador_pokemon
