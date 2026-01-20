@@ -1,0 +1,10 @@
+{
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "none",
+        "reportMissingModuleSource": "none"
+    },
+    "python.analysis.extraPaths": [
+        "/home/sugau/Projects/odoo18-dev/.venv/lib/python3.10/site-packages",
+        "/home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118"
+    ]
+}

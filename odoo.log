@@ -1,0 +1,205 @@
+2026-01-20 13:54:43,868 99957 INFO ? odoo: Odoo version 18.0 
+2026-01-20 13:54:43,869 99957 INFO ? odoo: Using configuration file at /home/sugau/Projects/odoo18-dev/odoo.conf 
+2026-01-20 13:54:43,869 99957 INFO ? odoo: addons paths: ['/home/sugau/Projects/odoo18-dev/odoo/addons', '/home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0', '/home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118', '/home/sugau/Projects/odoo18-dev/custom_addons'] 
+2026-01-20 13:54:43,869 99957 INFO ? odoo: database: odoo@localhost:5432 
+2026-01-20 13:54:44,065 99957 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2026-01-20 13:54:44,065 99957 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltoimage to generate images from html. 
+2026-01-20 13:54:44,246 99957 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2026-01-20 13:54:44,246 99957 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "/home/sugau/Projects/odoo18-dev/odoo/service/server.py", line 1312, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "/home/sugau/Projects/odoo18-dev/odoo/modules/module.py", line 384, in load_openerp_module
+    __import__(qualname)
+ModuleNotFoundError: No module named 'odoo.addons.web'
+2026-01-20 13:56:50,244 100810 INFO ? odoo: Odoo version 18.0 
+2026-01-20 13:56:50,244 100810 INFO ? odoo: Using configuration file at /home/sugau/Projects/odoo18-dev/odoo.conf 
+2026-01-20 13:56:50,244 100810 INFO ? odoo: addons paths: ['/home/sugau/Projects/odoo18-dev/odoo/addons', '/home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0', '/home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118', '/home/sugau/Projects/odoo18-dev/custom_addons'] 
+2026-01-20 13:56:50,245 100810 INFO ? odoo: database: odoo@localhost:5432 
+2026-01-20 13:56:50,427 100810 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2026-01-20 13:56:50,427 100810 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltoimage to generate images from html. 
+2026-01-20 13:56:50,603 100810 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2026-01-20 13:56:50,603 100810 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "/home/sugau/Projects/odoo18-dev/odoo/service/server.py", line 1312, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "/home/sugau/Projects/odoo18-dev/odoo/modules/module.py", line 384, in load_openerp_module
+    __import__(qualname)
+ModuleNotFoundError: No module named 'odoo.addons.web'
+2026-01-20 14:00:15,716 102172 INFO ? odoo: Odoo version 18.0 
+2026-01-20 14:00:15,716 102172 INFO ? odoo: Using configuration file at /home/sugau/Projects/odoo18-dev/odoo.conf 
+2026-01-20 14:00:15,717 102172 INFO ? odoo: addons paths: ['/home/sugau/Projects/odoo18-dev/odoo/addons', '/home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0', '/home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118', '/home/sugau/Projects/odoo18-dev/custom_addons'] 
+2026-01-20 14:00:15,717 102172 INFO ? odoo: database: odoo@localhost:5432 
+2026-01-20 14:00:15,924 102172 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2026-01-20 14:00:15,924 102172 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltoimage to generate images from html. 
+2026-01-20 14:00:16,136 102172 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2026-01-20 14:00:16,137 102172 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "/home/sugau/Projects/odoo18-dev/odoo/service/server.py", line 1312, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "/home/sugau/Projects/odoo18-dev/odoo/modules/module.py", line 384, in load_openerp_module
+    __import__(qualname)
+ModuleNotFoundError: No module named 'odoo.addons.web'
+2026-01-20 14:00:16,139 102172 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/odoo/addons 
+2026-01-20 14:00:16,139 102172 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0 
+2026-01-20 14:00:16,139 102172 INFO ? odoo.service.server: Watching addons folder /home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118 
+2026-01-20 14:00:16,139 102172 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/custom_addons 
+2026-01-20 14:00:16,154 102172 INFO ? odoo.service.server: AutoReload watcher running with inotify 
+2026-01-20 14:01:47,578 102792 INFO ? odoo: Odoo version 18.0 
+2026-01-20 14:01:47,579 102792 INFO ? odoo: Using configuration file at /home/sugau/Projects/odoo18-dev/odoo.conf 
+2026-01-20 14:01:47,579 102792 INFO ? odoo: addons paths: ['/home/sugau/Projects/odoo18-dev/odoo/addons', '/home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0', '/home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118', '/home/sugau/Projects/odoo18-dev/custom_addons'] 
+2026-01-20 14:01:47,579 102792 INFO ? odoo: database: odoo@localhost:5432 
+2026-01-20 14:01:47,768 102792 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2026-01-20 14:01:47,769 102792 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltoimage to generate images from html. 
+2026-01-20 14:01:47,945 102792 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2026-01-20 14:01:47,946 102792 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "/home/sugau/Projects/odoo18-dev/odoo/service/server.py", line 1312, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "/home/sugau/Projects/odoo18-dev/odoo/modules/module.py", line 384, in load_openerp_module
+    __import__(qualname)
+ModuleNotFoundError: No module named 'odoo.addons.web'
+2026-01-20 14:01:47,947 102792 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/odoo/addons 
+2026-01-20 14:01:47,947 102792 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0 
+2026-01-20 14:01:47,947 102792 INFO ? odoo.service.server: Watching addons folder /home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118 
+2026-01-20 14:01:47,948 102792 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/custom_addons 
+2026-01-20 14:01:47,961 102792 INFO ? odoo.service.server: AutoReload watcher running with inotify 
+2026-01-20 14:03:43,979 103522 INFO ? odoo: Odoo version 18.0 
+2026-01-20 14:03:43,980 103522 INFO ? odoo: Using configuration file at /home/sugau/Projects/odoo18-dev/odoo.conf 
+2026-01-20 14:03:43,980 103522 INFO ? odoo: addons paths: ['/home/sugau/Projects/odoo18-dev/odoo/addons', '/home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0', '/home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118', '/home/sugau/Projects/odoo18-dev/custom_addons'] 
+2026-01-20 14:03:43,980 103522 INFO ? odoo: database: odoo@localhost:5432 
+2026-01-20 14:03:44,173 103522 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2026-01-20 14:03:44,173 103522 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltoimage to generate images from html. 
+2026-01-20 14:03:44,355 103522 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2026-01-20 14:03:44,355 103522 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "/home/sugau/Projects/odoo18-dev/odoo/service/server.py", line 1312, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "/home/sugau/Projects/odoo18-dev/odoo/modules/module.py", line 384, in load_openerp_module
+    __import__(qualname)
+ModuleNotFoundError: No module named 'odoo.addons.web'
+2026-01-20 14:03:44,357 103522 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/odoo/addons 
+2026-01-20 14:03:44,357 103522 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0 
+2026-01-20 14:03:44,357 103522 INFO ? odoo.service.server: Watching addons folder /home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118 
+2026-01-20 14:03:44,357 103522 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/custom_addons 
+2026-01-20 14:03:44,372 103522 INFO ? odoo.service.server: AutoReload watcher running with inotify 
+2026-01-20 14:10:37,901 105737 INFO ? odoo: Odoo version 18.0 
+2026-01-20 14:10:37,901 105737 INFO ? odoo: Using configuration file at /home/sugau/Projects/odoo18-dev/odoo.conf 
+2026-01-20 14:10:37,902 105737 INFO ? odoo: addons paths: ['/home/sugau/Projects/odoo18-dev/odoo/addons', '/home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0', '/home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118', '/home/sugau/Projects/odoo18-dev/custom_addons'] 
+2026-01-20 14:10:37,902 105737 INFO ? odoo: database: odoo@localhost:5432 
+2026-01-20 14:10:38,086 105737 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2026-01-20 14:10:38,087 105737 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltoimage to generate images from html. 
+2026-01-20 14:10:38,260 105737 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2026-01-20 14:10:38,261 105737 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "/home/sugau/Projects/odoo18-dev/odoo/service/server.py", line 1312, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "/home/sugau/Projects/odoo18-dev/odoo/modules/module.py", line 384, in load_openerp_module
+    __import__(qualname)
+ModuleNotFoundError: No module named 'odoo.addons.web'
+2026-01-20 14:10:38,262 105737 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/odoo/addons 
+2026-01-20 14:10:38,262 105737 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0 
+2026-01-20 14:10:38,263 105737 INFO ? odoo.service.server: Watching addons folder /home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118 
+2026-01-20 14:10:38,263 105737 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/custom_addons 
+2026-01-20 14:10:38,277 105737 INFO ? odoo.service.server: AutoReload watcher running with inotify 
+2026-01-20 14:16:21,124 107528 INFO ? odoo: Odoo version 18.0 
+2026-01-20 14:16:21,124 107528 INFO ? odoo: Using configuration file at /home/sugau/Projects/odoo18-dev/odoo.conf 
+2026-01-20 14:16:21,124 107528 INFO ? odoo: addons paths: ['/home/sugau/Projects/odoo18-dev/odoo/addons', '/home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0', '/home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118', '/home/sugau/Projects/odoo18-dev/custom_addons'] 
+2026-01-20 14:16:21,125 107528 INFO ? odoo: database: odoo@localhost:5422 
+2026-01-20 14:16:21,312 107528 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2026-01-20 14:16:21,312 107528 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltoimage to generate images from html. 
+2026-01-20 14:16:21,489 107528 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2026-01-20 14:16:21,489 107528 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "/home/sugau/Projects/odoo18-dev/odoo/service/server.py", line 1312, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "/home/sugau/Projects/odoo18-dev/odoo/modules/module.py", line 384, in load_openerp_module
+    __import__(qualname)
+ModuleNotFoundError: No module named 'odoo.addons.web'
+2026-01-20 14:16:21,491 107528 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/odoo/addons 
+2026-01-20 14:16:21,491 107528 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0 
+2026-01-20 14:16:21,491 107528 INFO ? odoo.service.server: Watching addons folder /home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118 
+2026-01-20 14:16:21,491 107528 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/custom_addons 
+2026-01-20 14:16:21,505 107528 INFO ? odoo.service.server: AutoReload watcher running with inotify 
+2026-01-20 14:16:21,505 107528 INFO ? odoo.service.server: HTTP service (werkzeug) running on sugau-H110:8025 
+2026-01-20 14:16:55,805 107528 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-01-20 14:16:55,818 107528 INFO ? odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-01-20 14:16:55,826 107528 WARNING ? odoo.modules.graph: module bus: not installable, skipped 
+2026-01-20 14:16:55,826 107528 WARNING ? odoo.modules.graph: module html_editor: not installable, skipped 
+2026-01-20 14:16:55,827 107528 WARNING ? odoo.modules.graph: module base_import_module: not installable, skipped 
+2026-01-20 14:16:55,827 107528 WARNING ? odoo.modules.graph: module base_setup: not installable, skipped 
+2026-01-20 14:16:55,828 107528 WARNING ? odoo.modules.graph: module base_import: not installable, skipped 
+2026-01-20 14:16:55,828 107528 WARNING ? odoo.modules.graph: module web_tour: not installable, skipped 
+2026-01-20 14:16:55,828 107528 WARNING ? odoo.modules.graph: module web_unsplash: not installable, skipped 
+2026-01-20 14:16:55,829 107528 WARNING ? odoo.modules.graph: module iap: not installable, skipped 
+2026-01-20 14:16:55,829 107528 WARNING ? odoo.modules.graph: module web_editor: not installable, skipped 
+2026-01-20 14:16:55,829 107528 WARNING ? odoo.modules.graph: module web: not installable, skipped 
+2026-01-20 14:16:55,830 107528 WARNING ? odoo.modules.graph: module auth_totp: not installable, skipped 
+2026-01-20 14:16:55,830 107528 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-01-20 14:16:55,831 107528 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-01-20 14:16:55,895 107528 ERROR ? odoo.modules.loading: Some modules are not loaded, some dependencies or manifest may be missing: ['auth_totp', 'base_import', 'base_import_module', 'base_setup', 'bus', 'html_editor', 'iap', 'web', 'web_editor', 'web_tour', 'web_unsplash'] 
+2026-01-20 14:16:55,896 107528 INFO ? odoo.modules.loading: Modules loaded. 
+2026-01-20 14:16:55,899 107528 INFO ? odoo.modules.registry: Registry loaded in 0.114s 
+2026-01-20 14:16:55,900 107528 INFO pokemon_dylan odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-01-20 14:16:55,908 107528 INFO pokemon_dylan werkzeug: 127.0.0.1 - - [20/Jan/2026 14:16:55] "GET / HTTP/1.1" 404 - 19 0.032 0.118
+2026-01-20 14:20:20,331 108883 INFO ? odoo: Odoo version 18.0 
+2026-01-20 14:20:20,332 108883 INFO ? odoo: Using configuration file at /home/sugau/Projects/odoo18-dev/odoo.conf 
+2026-01-20 14:20:20,332 108883 INFO ? odoo: addons paths: ['/home/sugau/Projects/odoo18-dev/odoo/addons', '/home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0', '/home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118', '/home/sugau/Projects/odoo18-dev/custom_addons'] 
+2026-01-20 14:20:20,332 108883 INFO ? odoo: database: odoo@localhost:5422 
+2026-01-20 14:20:20,418 108883 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2026-01-20 14:20:20,419 108883 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltoimage to generate images from html. 
+2026-01-20 14:20:20,528 108883 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2026-01-20 14:20:20,528 108883 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "/home/sugau/Projects/odoo18-dev/odoo/service/server.py", line 1312, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "/home/sugau/Projects/odoo18-dev/odoo/modules/module.py", line 384, in load_openerp_module
+    __import__(qualname)
+ModuleNotFoundError: No module named 'odoo.addons.web'
+2026-01-20 14:20:20,529 108883 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/odoo/addons 
+2026-01-20 14:20:20,529 108883 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0 
+2026-01-20 14:20:20,529 108883 INFO ? odoo.service.server: Watching addons folder /home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118 
+2026-01-20 14:20:20,529 108883 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/custom_addons 
+2026-01-20 14:20:20,537 108883 INFO ? odoo.service.server: AutoReload watcher running with inotify 
+2026-01-20 14:20:20,538 108883 INFO ? odoo.service.server: HTTP service (werkzeug) running on sugau-H110:8025 
+2026-01-20 14:21:18,654 108883 INFO ? odoo.service.server: Initiating shutdown 
+2026-01-20 14:21:18,654 108883 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-01-20 14:21:19,098 108883 INFO ? odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 2 connections  
+2026-01-20 14:21:21,541 109240 INFO ? odoo: Odoo version 18.0 
+2026-01-20 14:21:21,541 109240 INFO ? odoo: Using configuration file at /home/sugau/Projects/odoo18-dev/odoo.conf 
+2026-01-20 14:21:21,542 109240 INFO ? odoo: addons paths: ['/home/sugau/Projects/odoo18-dev/odoo/addons', '/home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0', '/home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118', '/home/sugau/Projects/odoo18-dev/custom_addons'] 
+2026-01-20 14:21:21,542 109240 INFO ? odoo: database: odoo@localhost:5422 
+2026-01-20 14:21:21,736 109240 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2026-01-20 14:21:21,736 109240 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltoimage to generate images from html. 
+2026-01-20 14:21:21,916 109240 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2026-01-20 14:21:21,916 109240 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "/home/sugau/Projects/odoo18-dev/odoo/service/server.py", line 1312, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "/home/sugau/Projects/odoo18-dev/odoo/modules/module.py", line 384, in load_openerp_module
+    __import__(qualname)
+ModuleNotFoundError: No module named 'odoo.addons.web'
+2026-01-20 14:21:21,918 109240 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/odoo/addons 
+2026-01-20 14:21:21,918 109240 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/.local/share/Odoo/addons/18.0 
+2026-01-20 14:21:21,919 109240 INFO ? odoo.service.server: Watching addons folder /home/sugau/source/odoo-18.0.post20251118/odoo-18.0.post20251118 
+2026-01-20 14:21:21,919 109240 INFO ? odoo.service.server: Watching addons folder /home/sugau/Projects/odoo18-dev/custom_addons 
+2026-01-20 14:21:21,934 109240 INFO ? odoo.service.server: AutoReload watcher running with inotify 
+2026-01-20 14:21:21,935 109240 INFO ? odoo.service.server: HTTP service (werkzeug) running on sugau-H110:8025 

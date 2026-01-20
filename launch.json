@@ -5,7 +5,7 @@
             "name": "Odoo 18 Debug",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/odoo/odoo-bin",
+            "program": "${workspaceFolder}odoo-18.0.post20251118/odoo-18.0.post20251118/odoo-bin",
             "console": "integratedTerminal",
             "args": [
                 "--config=${workspaceFolder}/odoo.conf"
