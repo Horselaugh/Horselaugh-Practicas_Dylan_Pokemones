@@ -1,0 +1,74 @@
+services:
+  # Web Application Service Definition
+  # --------
+  #
+  # All of the information needed to start up an odoo web
+  # application container.
+  web:
+    image: odoo:18.0
+    depends_on:
+        - db
+
+    # Port Mapping
+    # --------
+    #
+    # Here we are mapping a port on the host machine (on the left)
+    # to a port inside of the container (on the right.) The default
+    # port on Odoo is 8069, so Odoo is running on that port inside
+    # of the container. But we are going to access it locally on
+    # our machine from localhost:9000.
+    ports:
+      - "8025:8069"
+
+    # Data Volumes
+    # --------
+    #
+    # This defines files that we are mapping from the host machine
+    # into the container.
+    #
+    # Right now, we are using it to map a configuration file into
+    # the container and any extra odoo modules.
+    volumes:
+      - ./config:/etc/odoo/
+      - ./addons:/mnt/extra-addons
+
+    # Odoo Environment Variables
+    # --------
+    #
+    # The odoo image uses a few different environment
+    # variables when running to connect to the postgres
+    # database.
+    #
+    # Make sure that they are the same as the database user
+    # defined in the db container environment variables.
+    environment:
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=0d00D1tr1MvsM4
+
+  # Database Container Service Definition
+  # --------
+  #
+  # All of the information needed to start up a postgresql
+  # container.
+  db:
+    image: postgres:15.4
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgresql_password
+      - POSTGRES_USER=odoo
+      - PGDATA= /var/lib/postgresql/data/pgdata/
+    volumes:
+      - /postgres/pgdata:/var/lib/postgresql/data/
+    secrets:
+      - postgresql_password
+    ports:
+      - '5422:5432'
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 2GB
+secrets:
+  postgresql_password:
+    file: odoo_pg_pass
