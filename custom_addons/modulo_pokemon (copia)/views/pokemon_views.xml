@@ -1,0 +1,87 @@
+<!-- entrenador_pokemon_views.xml -->
+<odoo>
+    <data>
+        <!-- Form View para Entrenador -->
+        <record id="view_entrenador_form" model="ir.ui.view">
+            <field name="name">pokemon.entrenador.form</field>
+            <field name="model">pokemon.entrenador</field>
+            <field name="arch" type="xml">
+                <form string="Entrenador Pokémon">
+                    <header>
+                        <button name="action_cargar_pokemon" type="object" string="Cargar Pokémon de API" class="btn-primary"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="%(action_entrenador_tree)d" type="action" 
+                                    class="oe_stat_button" icon="fa-users" context="{'search_default_my_entrenadores': 1}">
+                                <div class="o_stat_info">
+                                    <span class="o_stat_text">Entrenadores</span>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Nombre del entrenador"/>
+                            </h1>
+                            <group>
+                                <field name="category" widget="selection"/>
+                            </group>
+                        </div>
+                        <notebook>
+                            <page string="Pokémon Capturados">
+                                <field name="pokemon_count" widget="progressbar" 
+                                       options="{'current_value': pokemon_count, 'max_value': 151, 'editable': False}"/>
+                                <field name="pokemon_ids" context="{'tree_view_ref': 'pokemon.view_pokemon_tree'}">
+                                    <tree string="Pokémon Capturados">
+                                        <field name="name"/>
+                                        <field name="pokedex_number"/>
+                                        <field name="category"/>
+                                        <field name="abilities"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="name"/>
+                                                <field name="pokedex_number"/>
+                                            </group>
+                                            <group>
+                                                <field name="category"/>
+                                                <field name="abilities"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Información">
+                                <group>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="category"/>
+                                    </group>
+                                    <group>
+                                        <field name="pokemon_count" readonly="1"/>
+                                        <field name="create_date" readonly="1"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View para Entrenador -->
+        <record id="view_entrenador_tree" model="ir.ui.view">
+            <field name="name">pokemon.entrenador.tree</field>
+            <field name="model">pokemon.entrenador</field>
+            <field name="arch" type="xml">
+                <tree string="Entrenadores Pokémon">
+                    <field name="name"/>
+                    <field name="category"/>
+                    <field name="pokemon_count" widget="progressbar" 
+                           options="{'current_value': pokemon_count, 'max_value': 151, 'editable': False}"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

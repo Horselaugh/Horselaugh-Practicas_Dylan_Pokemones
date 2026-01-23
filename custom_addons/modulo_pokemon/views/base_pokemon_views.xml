@@ -1,0 +1,56 @@
+<!-- base_pokemon_views.xml -->
+<odoo>
+    <data>
+        <!-- Form View para Pokémon -->
+        <record id="view_pokemon_form" model="ir.ui.view">
+            <field name="name">pokemon.pokemon.form</field>
+            <field name="model">pokemon.pokemon</field>
+            <field name="arch" type="xml">
+                <form string="Pokémon">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                            <h2>
+                                <field name="pokedex_number"/> - <field name="category"/>
+                            </h2>
+                        </div>
+                        <notebook>
+                            <page string="Información Básica">
+                                <group>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="pokedex_number"/>
+                                        <field name="category"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Entrenadores">
+                                <field name="entrenador_ids">
+                                    <tree string="Entrenadores que lo capturaron">
+                                        <field name="name"/>
+                                        <field name="category"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View para Pokémon -->
+        <record id="view_pokemon_tree" model="ir.ui.view">
+            <field name="name">pokemon.pokemon.tree</field>
+            <field name="model">pokemon.pokemon</field>
+            <field name="arch" type="xml">
+                <tree string="Pokémon">
+                    <field name="pokedex_number"/>
+                    <field name="name"/>
+                    <field name="category"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>
