@@ -8,8 +8,6 @@
             <field name="arch" type="xml">
                 <form string="Detalles del Pokémon">
                     <sheet>
-
-                        
                         <group>
                             <group string="Información Básica">
                                 <field name="pokedex_number" string="N° Pokédex"/>
