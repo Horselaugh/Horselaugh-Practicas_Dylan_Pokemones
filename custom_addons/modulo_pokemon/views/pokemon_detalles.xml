@@ -32,11 +32,10 @@
                                         <field name="special_defense" string="Defensa Esp."/>
                                         <field name="speed" string="Velocidad"/>
                                     </group>
+                                    <group string="Habilidades">
+                                        <field name="abilities" widget="textarea" nolabel="1"/>
+                                    </group>
                                 </group>
-                            </page>
-                            
-                            <page string="Habilidades">
-                                <field name="abilities" widget="textarea" nolabel="1"/>
                             </page>
                         </notebook>
                     </sheet>

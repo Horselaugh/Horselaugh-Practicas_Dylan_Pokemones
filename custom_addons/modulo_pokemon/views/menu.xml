@@ -12,7 +12,7 @@
         <record id="action_pokemon_lista" model="ir.actions.act_window">
             <field name="name">Pokémon Disponibles</field>
             <field name="res_model">pokemon.pokemon</field>
-            <field name="view_mode">list,form</field>  <!-- Cambiado de tree a list -->
+            <field name="view_mode">list,form</field>
             <field name="domain">[]</field>
         </record>
 
@@ -24,7 +24,6 @@
             sequence="10"
         />
         
-
         <!-- Submenú de Pokédex -->
         <menuitem 
             id="pokemon_detalles" 

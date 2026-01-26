@@ -19,11 +19,11 @@
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
-        'views/menu.xml',
         'views/pokemon_lista.xml',
         'views/pokemon_detalles.xml',
         'views/captura.xml',
         'views/entrenador.xml',
+        'views/menu.xml',
     ],
     'demo': [
         'demo/demo.xml',

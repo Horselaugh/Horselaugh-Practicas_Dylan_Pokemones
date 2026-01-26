@@ -19,8 +19,8 @@ class Pokemon(models.Model):
     weight = fields.Float(string='Peso (hectogramos)')
     base_experience = fields.Integer(string='Experiencia Base')
     
-    # Tipos (ej: grass, poison) - muchos a muchos si quieres normalizar
-    types = fields.Char(string='Tipos')  # Puedes usar Text si prefieres
+    # Tipos 
+    types = fields.Char(string='Tipos')
     
     # Habilidades
     abilities = fields.Text(string='Habilidades')
