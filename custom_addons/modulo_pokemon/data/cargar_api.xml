@@ -1,5 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
-        <function  model="base_pokemon" name="cargar_pokemon_desde_api" />
+        <function model="pokemon.pokemon" name="cargar_pokemon_desde_api_lista" />
+        <function model="pokemon.pokemon" name="cargar_pokemon_desde_api" />
     </data>
 </odoo>

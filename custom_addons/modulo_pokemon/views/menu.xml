@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Menú Principal Pokémon -->
+        <menuitem 
+            id="menu_pokemon_root" 
+            name="Pokémon" 
+            sequence="10"
+        />
+        
+        <!-- Acción para lista de Pokémon -->
+        <record id="action_pokemon_lista" model="ir.actions.act_window">
+            <field name="name">Pokémon Disponibles</field>
+            <field name="res_model">pokemon.pokemon</field>
+            <field name="view_mode">list,form</field>  <!-- Cambiado de tree a list -->
+            <field name="domain">[]</field>
+        </record>
+
+        <!-- Menú para lista de Pokémon -->
+        <menuitem 
+            id="pokemon_lista" 
+            name="Lista de Pokemon" 
+            parent="menu_pokemon_root"
+            sequence="10"
+        />
+        
+
+        <!-- Submenú de Pokédex -->
+        <menuitem 
+            id="pokemon_detalles" 
+            name="Pokédex Detallada"
+            parent="pokemon_lista"
+            action="action_pokemon_lista"
+            sequence="10"
+        />
+        
+        <!-- Acción para capturas -->
+        <record id="action_captura_list" model="ir.actions.act_window">
+            <field name="name">Capturas Pokémon</field>
+            <field name="res_model">pokemon.captura</field>
+            <field name="view_mode">list,form</field>  <!-- Cambiado de tree a list -->
+            <field name="domain">[]</field>
+        </record>
+        
+        <!-- Menú para capturas -->
+        <menuitem 
+            id="menu_captura_list" 
+            name="Registro de Capturas"
+            parent="menu_pokemon_root"
+            action="action_captura_list"
+            sequence="20"
+        />
+        
+        <!-- Acción para entrenadores -->
+        <record id="action_entrenador_list" model="ir.actions.act_window">
+            <field name="name">Entrenadores Pokémon</field>
+            <field name="res_model">pokemon.entrenador</field>
+            <field name="view_mode">list,form</field>  <!-- Cambiado de tree a list -->
+            <field name="domain">[]</field>
+        </record>
+        
+        <!-- Menú para entrenadores -->
+        <menuitem 
+            id="entrenador" 
+            name="Entrenadores"
+            parent="menu_pokemon_root"
+            action="action_entrenador_list"
+            sequence="30"
+        />
+    </data>
+</odoo>

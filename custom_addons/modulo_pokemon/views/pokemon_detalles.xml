@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista Form para Pokémon (Detallada) -->
+        <record id="view_pokemon_form" model="ir.ui.view">
+            <field name="name">pokemon.pokemon.form</field>
+            <field name="model">pokemon.pokemon</field>
+            <field name="arch" type="xml">
+                <form string="Detalles del Pokémon">
+                    <sheet>
+
+                        
+                        <group>
+                            <group string="Información Básica">
+                                <field name="pokedex_number" string="N° Pokédex"/>
+                                <field name="name"/>
+                                <field name="types"/>
+                                <field name="height" string="Altura (dm)"/>
+                                <field name="weight" string="Peso (hg)"/>
+                                <field name="base_experience" string="Exp. Base"/>
+                            </group>
+                        </group>
+                        
+                        <notebook>
+                            <page string="Estadísticas">
+                                <group>
+                                    <group string="Combate">
+                                        <field name="hp" string="HP"/>
+                                        <field name="attack" string="Ataque"/>
+                                        <field name="defense" string="Defensa"/>
+                                    </group>
+                                    <group string="Especiales">
+                                        <field name="special_attack" string="Ataque Esp."/>
+                                        <field name="special_defense" string="Defensa Esp."/>
+                                        <field name="speed" string="Velocidad"/>
+                                    </group>
+                                </group>
+                            </page>
+                            
+                            <page string="Habilidades">
+                                <field name="abilities" widget="textarea" nolabel="1"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

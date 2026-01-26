@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista List para Entrenadores -->
+        <record id="view_entrenador_tree" model="ir.ui.view">
+            <field name="name">pokemon.entrenador.tree</field>
+            <field name="model">pokemon.entrenador</field>
+            <field name="arch" type="xml">
+                <list string="Entrenadores Pokémon">
+                    <field name="name" string="Nombre"/>
+                    <field name="category" string="Categoría"/>
+                    <field name="pokemon_count" string="Pokémon Capturados"/>
+                </list>
+            </field>
+        </record>
+        
+        <!-- Vista Form para Entrenadores -->
+        <record id="view_entrenador_form" model="ir.ui.view">
+            <field name="name">pokemon.entrenador.form</field>
+            <field name="model">pokemon.entrenador</field>
+            <field name="arch" type="xml">
+                <form string="Entrenador Pokémon">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="category"/>
+                                <field name="pokemon_count" string="Total Capturados" readonly="1"/>
+                            </group>
+                        </group>
+                        
+                        <notebook>
+                            <page string="Pokémon Capturados">
+                                <field name="pokemon_ids">
+                                    <list string="Pokémon">
+                                        <field name="pokedex_number" string="N°"/>
+                                        <field name="name" string="Nombre"/>
+                                        <field name="types" string="Tipos"/>
+                                        <field name="height" string="Altura"/>
+                                        <field name="weight" string="Peso"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

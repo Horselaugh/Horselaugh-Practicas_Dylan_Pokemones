@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista List para Pokémon (Lista General) -->
+        <record id="view_pokemon_tree" model="ir.ui.view">
+            <field name="name">pokemon.pokemon.tree</field>
+            <field name="model">pokemon.pokemon</field>
+            <field name="arch" type="xml">
+                <list string="Pokémon Disponibles">
+                    <field name="pokedex_number" string="N°"/>
+                    <field name="name" string="Nombre"/>
+                    <field name="types" string="Tipos"/>
+                    <field name="height" string="Altura"/>
+                    <field name="weight" string="Peso"/>
+                </list>
+            </field>
+        </record>
+    </data>
+</odoo>

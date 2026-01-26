@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista List para Capturas -->
+        <record id="view_captura_tree" model="ir.ui.view">
+            <field name="name">pokemon.captura.tree</field>
+            <field name="model">pokemon.captura</field>
+            <field name="arch" type="xml">
+                <list string="Registro de Capturas">
+                    <field name="entrenador_nombre" string="Entrenador"/>
+                    <field name="pokemon_name" string="Pokémon"/>
+                    <field name="estado"/>
+                </list>
+            </field>
+        </record>
+        
+        <!-- Vista Form para Capturas -->
+        <record id="view_captura_form" model="ir.ui.view">
+            <field name="name">pokemon.captura.form</field>
+            <field name="model">pokemon.captura</field>
+            <field name="arch" type="xml">
+                <form string="Captura Pokémon">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="entrenador_id" string="Entrenador" 
+                                       options="{'no_create': True}"/>
+                                <field name="entrenador_nombre" string="Nombre" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="pokemon_id" string="Pokémon"
+                                       options="{'no_create': True}"/>
+                                <field name="pokemon_name" string="Nombre" readonly="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="estado"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
