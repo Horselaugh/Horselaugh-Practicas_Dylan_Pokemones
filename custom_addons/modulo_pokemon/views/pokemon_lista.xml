@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- Vista List para Pokémon (Lista General) -->
-        <record id="view_pokemon_tree" model="ir.ui.view">
-            <field name="name">pokemon.pokemon.tree</field>
+        <!-- Vista list (Lista) para Pokémon -->
+        <record id="view_pokemon_list" model="ir.ui.view">
+            <field name="name">pokemon.pokemon.list</field>
             <field name="model">pokemon.pokemon</field>
             <field name="arch" type="xml">
                 <list string="Pokémon Disponibles">
@@ -12,6 +12,7 @@
                     <field name="types" string="Tipos"/>
                     <field name="height" string="Altura"/>
                     <field name="weight" string="Peso"/>
+                    <field name="base_experience" string="Exp. Base"/>
                 </list>
             </field>
         </record>

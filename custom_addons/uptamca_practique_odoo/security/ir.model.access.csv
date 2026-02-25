@@ -1,0 +1,5 @@
+id,name,model_id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pokemon_category,pokemon.category,pokemon.category,base.group_user,1,1,1,1
+access_pokemon,pokemon,pokemon,base.group_user,1,1,1,1
+access_pokemon_entrenador,pokemon.entrenador,pokemon.entrenador,base.group_user,1,1,1,1
+access_captura_pokemon,captura.pokemon,captura.pokemon,base.group_user,1,1,1,1

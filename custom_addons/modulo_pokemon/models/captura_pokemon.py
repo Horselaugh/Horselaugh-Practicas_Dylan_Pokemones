@@ -20,7 +20,6 @@ class CapturaPokemon(models.Model):
         required=True
     )
     
-    
     # Campos relacionados (para fácil visualización)
     pokemon_name = fields.Char(
         string='Nombre Pokémon',

@@ -32,10 +32,7 @@ class Pokemon(models.Model):
     special_attack = fields.Integer(string='Ataque Especial')
     special_defense = fields.Integer(string='Defensa Especial')
     speed = fields.Integer(string='Velocidad')
-    
-    # URL de la imagen
-    image_url = fields.Char(string='URL de Imagen')
-    
+
     # Relación con entrenadores
     entrenador_ids = fields.Many2many(
         'pokemon.entrenador',
@@ -45,7 +42,7 @@ class Pokemon(models.Model):
     @api.model
     def cargar_pokemon_desde_api_lista(self):
         url = "https://pokeapi.co/api/v2/pokemon?"  
-        try:
+        try: 
             response = requests.get(url, timeout=10)
             data = response.json()
             
@@ -71,7 +68,7 @@ class Pokemon(models.Model):
 
     @api.model
     def cargar_pokemon_desde_api(self):
-        for i in range(1, 154):
+        for i in range(1, 156):
             url = f"https://pokeapi.co/api/v2/pokemon/{i}/"
             try:
                 response = requests.get(url, timeout=10)
@@ -90,9 +87,6 @@ class Pokemon(models.Model):
                     stat_name = stat['stat']['name']
                     stats[stat_name] = stat['base_stat']
                 
-                # URL de imagen (front_default)
-                image_url = data.get('sprites', {}).get('front_default', '')
-                
                 # Crear Pokémon con todos los datos
                 vals = {
                     'name': data['name'].capitalize(),
@@ -109,7 +103,6 @@ class Pokemon(models.Model):
                     'special_attack': stats.get('special-attack', 0),
                     'special_defense': stats.get('special-defense', 0),
                     'speed': stats.get('speed', 0),
-                    'image_url': image_url,
                 }
                 
                 # Buscar si ya existe

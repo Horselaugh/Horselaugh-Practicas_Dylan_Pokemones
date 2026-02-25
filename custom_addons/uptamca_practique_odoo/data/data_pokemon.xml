@@ -1,0 +1,5 @@
+<odoo>
+    <data noupdate="1">
+        <function model="pokemon.list" name="_import_pokemon_from_api"/>
+    </data>
+</odoo>

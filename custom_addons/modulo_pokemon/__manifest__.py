@@ -18,12 +18,12 @@
     'version': '0.1',
     'depends': ['base'],
     'data': [
-        'security/ir.model.access.csv',
-        'views/pokemon_lista.xml',
-        'views/pokemon_detalles.xml',
-        'views/captura.xml',
-        'views/entrenador.xml',
-        'views/menu.xml',
+        'security/ir.model.access.csv',  # Primero permisos
+        'views/pokemon_lista.xml',       # Vista TREE primero
+        'views/pokemon_detalles.xml',    # Vista FORM después
+        'views/entrenador.xml',          # Vistas de entrenador
+        'views/captura.xml',             # Vistas de captura
+        'views/menu.xml',                # Menús al final
     ],
     'demo': [
         'demo/demo.xml',

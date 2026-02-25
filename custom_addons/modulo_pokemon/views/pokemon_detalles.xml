@@ -8,16 +8,19 @@
             <field name="arch" type="xml">
                 <form string="Detalles del Pokémon">
                     <sheet>
-
-                        
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                                <span class="text-muted">#<field name="pokedex_number"/></span>
+                            </h1>
+                        </div>
                         <group>
                             <group string="Información Básica">
-                                <field name="pokedex_number" string="N° Pokédex"/>
-                                <field name="name"/>
                                 <field name="types"/>
                                 <field name="height" string="Altura (dm)"/>
                                 <field name="weight" string="Peso (hg)"/>
                                 <field name="base_experience" string="Exp. Base"/>
+                                <field name="url_info" widget="url" string="Ver en API"/>
                             </group>
                         </group>
                         
@@ -34,10 +37,10 @@
                                         <field name="special_defense" string="Defensa Esp."/>
                                         <field name="speed" string="Velocidad"/>
                                     </group>
-                                    <group string="Habilidades">
-                                        <field name="abilities" widget="textarea" nolabel="1"/>
-                                    </group>
                                 </group>
+                            </page>
+                            <page string="Habilidades">
+                                <field name="abilities" widget="textarea" nolabel="1"/>
                             </page>
                         </notebook>
                     </sheet>
