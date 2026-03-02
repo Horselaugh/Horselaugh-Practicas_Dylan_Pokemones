@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <function model="ecommerce_dylan.productos_api" name="cargar_api_productos"/>
+        <function model="ecommerce_dylan.productos_api" name="cargar_api_detalles"/>
+    </data>
+</odoo>

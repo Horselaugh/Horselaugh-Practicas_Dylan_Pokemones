@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Menú Principal Ecommerce -->
+        <menuitem 
+            id="menu_ecommerce_root" 
+            name="PRODUCTOS" 
+            sequence="10"
+        />
+
+        <!-- Acción para lista de productos -->
+        <record id="action_product_list" model="ir.actions.act_window">
+            <field name="name">Lista de Productos</field>
+            <field name="res_model">ecommerce.product</field>
+            <field name="view_mode">list,form</field>
+            <field name="domain">[]</field>
+        </record>
+
+    </data>
+<odoo/>
+
