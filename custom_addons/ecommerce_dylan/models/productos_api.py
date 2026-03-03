@@ -5,8 +5,8 @@ import logging
 _logger = logging.getLogger(__name__)
 
 class ProductosAPI(models.Model):
-    _name = 'ecommerce_dylan.productos_api'
-    _description = 'Productos API'
+    _name = 'ecommerce.ecommerce'
+    _description = 'ecommerce'
 
     name = fields.Char(string='Nombre del Producto', required=True)
     price = fields.Float(string='Precio', required=True)
@@ -51,7 +51,7 @@ class ProductosAPI(models.Model):
                     'category': data['category'],
                     'image': data['image'],
                 }
-                self.create(vals)
+                self.create(vals)  # Esto estaba fuera del bucle
             else:
                 _logger.warning(f"Producto {i} no disponible o error de API")
         except Exception as e:

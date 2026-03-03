@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "ecommerce_dylan",
-    'summary': "Ecommerce Dylan ",
+    'name': "ecommerce",
+    'summary': "Ecommerce_Dylan",
     'description': """
     Modulo para un ecommerce de ejemplo, 
     con funcionalidades básicas para gestionar productos, 
@@ -20,6 +20,7 @@
     ],
     'demo': [
         'data/cargar_api.xml',
+        'demo/demo.xml',
     ],
 
     'images': [

@@ -4,13 +4,13 @@
         <!-- Vista list (Lista) para Products -->
         <record id="view_product_list" model="ir.ui.view">
             <field name="name">ecommerce.product.list</field>
-            <field name="model">ecommerce.product</field>
+            <field name="model">ecommerce.ecommerce</field>
             <field name="arch" type="xml">
-                <tree string="Lista de Productos">
+                <list string="Lista de Productos">
                     <field name="name"/>
                     <field name="price"/>
-                    <field name="stock"/>
-                </tree>
+                    <field name="category"/>
+                </list>
             </field>
         </record>
     </data>

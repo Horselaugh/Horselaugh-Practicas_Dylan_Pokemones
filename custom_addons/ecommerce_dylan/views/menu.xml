@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <!-- Menú Principal de Ecommerce -->
+        <menuitem id="menu_ecommerce_root" 
+                  name="PRODUCTOS" 
+                  sequence="10"/>
 
-        <!-- Menú Principal Ecommerce -->
-        <menuitem 
-            id="menu_ecommerce_root" 
-            name="PRODUCTOS" 
-            sequence="10"
-        />
+        <menuitem id="menu_ecommerce_products" 
+                  name="Productos" 
+                  parent="menu_ecommerce_root" 
+                  sequence="10"/>
 
-        <!-- Acción para lista de productos -->
-        <record id="action_product_list" model="ir.actions.act_window">
-            <field name="name">Lista de Productos</field>
-            <field name="res_model">ecommerce.product</field>
+        <!-- Acción de ventana -->
+        <record id="action_ecommerce_product" model="ir.actions.act_window">
+            <field name="name">Productos</field>
+            <field name="res_model">ecommerce.ecommerce</field>
             <field name="view_mode">list,form</field>
-            <field name="domain">[]</field>
         </record>
 
+        <!-- Submenú que abre la acción -->
+        <menuitem id="menu_ecommerce_product_list" 
+                  name="Lista de Productos" 
+                  parent="menu_ecommerce_products"
+                  action="action_ecommerce_product" 
+                  sequence="10"/>
     </data>
-<odoo/>
-
+</odoo>
