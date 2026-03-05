@@ -15,7 +15,10 @@
 
     'data': [
         'security/ir.model.access.csv',  # Primero permisos
-        'views/list.xml',
+        'views/detalles_compra_views.xml',
+        'views/compras.xml',
+        'views/clientes.xml',
+        'views/productos.xml',
         'views/menu.xml',                # Menús al final
     ],
     'demo': [
@@ -24,7 +27,7 @@
     ],
 
     'images': [
-        'static/description/icon.png',
+        'static/description/icon.jpg',
     ],
 
     'installable': True,

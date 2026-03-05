@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_detalles_compra_form" model="ir.ui.view">
+            <field name="name">detalles.compra.form</field>
+            <field name="model">ecommerce.detalles_compra</field>
+            <field name="arch" type="xml">
+                <form string="Detalles de Compra formulario">
+                    <sheet>
+                        <group>
+                            <field name="compra_id"/>
+                            <field name="producto_id"/>
+                            <field name="cantidad"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_detalles_compra_list" model="ir.ui.view">
+            <field name="name">detalles.compra.list</field>
+            <field name="model">ecommerce.detalles_compra</field>
+            <field name="arch" type="xml">
+                <list string="Detalles de Compra lista">
+                    <field name="compra_id"/>
+                    <field name="producto_id"/>
+                    <field name="cantidad"/>
+                </list>
+            </field>
+        </record>
+    </data>
+</odoo>

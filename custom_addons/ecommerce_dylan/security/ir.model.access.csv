@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ecommerce_dylan,access.ecommerce.dylan,model_ecommerce_ecommerce,base.group_user,1,1,1,1
+access_ecommerce_compra,access.ecommerce.compra,model_ecommerce_compra,base.group_user,1,1,1,1
+access_ecommerce_cliente,access.ecommerce.cliente,model_ecommerce_cliente,base.group_user,1,1,1,1
+access_ecommerce_producto_api,access.ecommerce.producto_api,model_ecommerce_producto_api,base.group_user,1,1,1,1
+access_ecommerce_detalles,access.ecommerce.detalles,model_ecommerce_detalles_compra,base.group_user,1,1,1,1

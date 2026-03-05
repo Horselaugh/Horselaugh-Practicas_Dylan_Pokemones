@@ -1,28 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- Menú Principal de Ecommerce -->
-        <menuitem id="menu_ecommerce_root" 
-                  name="PRODUCTOS" 
-                  sequence="10"/>
+        <!-- ACCIONES -->
+        
+        <!-- Acción para Clientes -->
+        <record id="action_ecommerce_cliente" model="ir.actions.act_window">
+            <field name="name">Clientes</field>
+            <field name="res_model">ecommerce.cliente</field>
+            <field name="view_mode">list,form</field>  <!-- CORREGIDO: tree → list -->
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Crear tu primer cliente
+                </p>
+            </field>
+        </record>
 
+        <!-- Acción para Compras -->
+        <record id="action_ecommerce_compra" model="ir.actions.act_window">
+            <field name="name">Compras</field>
+            <field name="res_model">ecommerce.compra</field>
+            <field name="view_mode">list,form</field>  <!-- CORREGIDO: tree → list -->
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Registrar una nueva compra
+                </p>
+            </field>
+        </record>
+
+        <!-- MENÚS -->
+        
+        <!-- Menú Principal Raíz -->
+        <menuitem id="menu_ecommerce_root" 
+                  name="Ecommerce Dylan" 
+                  sequence="10"
+                  web_icon="ecommerce_dylan,static/description/icon.png"/>
+
+        <!-- Submenú de Productos -->
         <menuitem id="menu_ecommerce_products" 
                   name="Productos" 
                   parent="menu_ecommerce_root" 
-                  sequence="10"/>
+                  sequence="10"
+                  action="action_ecommerce_product"/>  <!-- Esta acción viene de productos.xml -->
 
-        <!-- Acción de ventana -->
-        <record id="action_ecommerce_product" model="ir.actions.act_window">
-            <field name="name">Productos</field>
-            <field name="res_model">ecommerce.ecommerce</field>
-            <field name="view_mode">list,form</field>
-        </record>
+        <!-- Submenú de Clientes -->
+        <menuitem id="clientes_menu" 
+                  name="Clientes" 
+                  parent="menu_ecommerce_root" 
+                  sequence="20" 
+                  action="action_ecommerce_cliente"/>
 
-        <!-- Submenú que abre la acción -->
-        <menuitem id="menu_ecommerce_product_list" 
-                  name="Lista de Productos" 
-                  parent="menu_ecommerce_products"
-                  action="action_ecommerce_product" 
-                  sequence="10"/>
+        <!-- Submenú de Compras -->
+        <menuitem id="compras_menu" 
+                  name="Compras" 
+                  parent="menu_ecommerce_root" 
+                  sequence="30" 
+                  action="action_ecommerce_compra"/>
+
     </data>
 </odoo>

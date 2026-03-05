@@ -5,8 +5,8 @@ import logging
 _logger = logging.getLogger(__name__)
 
 class ProductosAPI(models.Model):
-    _name = 'ecommerce.ecommerce'
-    _description = 'ecommerce'
+    _name = 'ecommerce.producto_api'  
+    _description = 'Productos desde API'
 
     name = fields.Char(string='Nombre del Producto', required=True)
     price = fields.Float(string='Precio', required=True)
@@ -30,29 +30,30 @@ class ProductosAPI(models.Model):
                         'image': product['image'],
                     }
                     self.create(vals)
+                _logger.info(f"Productos cargados exitosamente: {len(data)} productos")
             else:
                 _logger.warning("Error al obtener productos de la API")
         except Exception as e:
             _logger.error(f"Error al cargar productos desde la API: {e}")
 
-
     @api.model
     def cargar_api_detalles(self):
         for i in range(1, 19):
             url = f"https://fakestoreapi.com/products/{i}"
-        try:
-            response = requests.get(url, timeout=10)
-            if response.status_code == 200:
-                data = response.json()
-                vals = {
-                    'name': data['title'],
-                    'price': data['price'],
-                    'description': data['description'],
-                    'category': data['category'],
-                    'image': data['image'],
-                }
-                self.create(vals)  # Esto estaba fuera del bucle
-            else:
-                _logger.warning(f"Producto {i} no disponible o error de API")
-        except Exception as e:
-            _logger.error(f"Error al cargar producto {i} desde la API: {e}")
+            try:  # CORREGIDO: try dentro del for
+                response = requests.get(url, timeout=10)
+                if response.status_code == 200:
+                    data = response.json()
+                    vals = {
+                        'name': data['title'],
+                        'price': data['price'],
+                        'description': data['description'],
+                        'category': data['category'],
+                        'image': data['image'],
+                    }
+                    self.create(vals)
+                    _logger.info(f"Producto {i} cargado exitosamente")
+                else:
+                    _logger.warning(f"Producto {i} no disponible o error de API")
+            except Exception as e:
+                _logger.error(f"Error al cargar producto {i} desde la API: {e}")
