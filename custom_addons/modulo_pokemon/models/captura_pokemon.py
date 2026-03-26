@@ -38,6 +38,8 @@ class CapturaPokemon(models.Model):
         ('capturado', 'Capturado'),
         ('liberado', 'Liberado'),
     ], default='capturado', string='Estado')
+
+    motivo_liberacion = fields.Char(string='Motivo de Liberación', required = "estado == 'liberado'")
     
     @api.model
     def create(self, vals):

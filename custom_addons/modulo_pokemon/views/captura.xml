@@ -28,13 +28,13 @@
                                 <field name="entrenador_nombre" string="Nombre" readonly="1"/>
                             </group>
                             <group>
-                                <field name="pokemon_id" string="Pokémon"
-                                       options="{'no_create': True}"/>
-                                <field name="pokemon_name" string="Nombre" readonly="1"/>
+                                <field name="pokemon_id" string="Pokemon liberado" readonly="estado != 'capturado'" 
+                                domain = "([('base_experience','>',50)])"/>
                             </group>
                         </group>
                         <group>
                             <field name="estado"/>
+                            <field name = "motivo_liberacion" invisible= "estado != 'liberado'"/>
                         </group>
                     </sheet>
                 </form>

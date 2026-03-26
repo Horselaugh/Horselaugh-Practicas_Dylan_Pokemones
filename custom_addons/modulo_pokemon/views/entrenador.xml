@@ -10,6 +10,7 @@
                     <field name="name" string="Nombre"/>
                     <field name="category" string="Categoría"/>
                     <field name="pokemon_count" string="Pokémon Capturados"/>
+                    <field name= "entrenador_id" context="{'default_category': 'novato'}"/>
                 </list>
             </field>
         </record>
@@ -28,7 +29,6 @@
                                 <field name="pokemon_count" string="Total Capturados" readonly="1"/>
                             </group>
                         </group>
-                        
                         <notebook>
                             <page string="Pokémon Capturados">
                                 <field name="pokemon_ids">

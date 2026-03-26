@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="view_usuarios_tree" model="ir.ui.view">
+            <field name="name">notas.usuarios.tree</field>
+            <field name="model">notas_dylan.materias</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name" string="Nombre">
+                    <field name="last_name" string="Apellido">
+                </list>
+        </record>    
+    </data>
+</odoo>
+
+<odoo>
+    <data>
+        <record id="view_usuarios_form" model="ir.ui.view">
+            <field name="name">notas.usuarios.form</field>
+            <field name="model">notas_dylan.materias</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name" string="Nombre">
+                    <field name="last_name" string="Apellido">
+                    <field name="user_materias" string="Materias del alumno">
+                </list>
+        </record>    
+    </data>
+</odoo>

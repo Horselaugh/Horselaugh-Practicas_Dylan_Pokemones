@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_notas_dylan_materias,notas_dylan.user,model_notas_dylan_user,base.group_user,1,1,1,1
+access_notas_dylan_user,notas_dylan.materias,model_notas_dylan_materias,base.group_user,1,1,1,1

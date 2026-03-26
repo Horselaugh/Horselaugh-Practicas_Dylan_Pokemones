@@ -1,0 +1,240 @@
+🎯 EJERCICIO 1: Productos Económicos
+
+Objetivo: Filtrar productos por rango de precios
+
+Enunciado:
+
+Obtén todos los productos que cuesten menos de 20€.
+Luego, obtén los productos que cuesten entre 50€ y 100€.
+Finalmente, cuenta cuántos productos hay en cada categoría de precio.
+
+-SOLUCION-
+
+# 1.1 Productos menos de 20€
+productos_baratos = env['ecommerce.producto_api'].search([
+    ('price', '<', 20)
+])
+print("🛒 Productos menos de 20€:")
+for p in productos_baratos:
+    print(f"  - {p.name}: {p.price}€")
+
+# 1.2 Productos entre 50€ y 100€
+productos_medios = env['ecommerce.producto_api'].search([
+    ('price', '>=', 50),
+    ('price', '<=', 100)
+])
+print(f"\n📊 Productos entre 50€ y 100€: {len(productos_medios)}")
+
+# 1.3 Conteo por rangos
+rangos = {
+    'menos_20': env['ecommerce.producto_api'].search_count([('price', '<', 20)]),
+    '20_50': env['ecommerce.producto_api'].search_count([
+        ('price', '>=', 20), 
+        ('price', '<', 50)
+    ]),
+    '50_100': env['ecommerce.producto_api'].search_count([
+        ('price', '>=', 50), 
+        ('price', '<=', 100)
+    ]),
+    'mas_100': env['ecommerce.producto_api'].search_count([('price', '>', 100)])
+}
+
+print("\n📈 Conteo por rangos:")
+for rango, cantidad in rangos.items():
+    print(f"  {rango}: {cantidad} productos")
+
+🎯 EJERCICIO 2: Búsqueda por Categorías
+
+Objetivo: Filtrar productos por categorías específicas
+
+Enunciado:
+text
+
+Busca todos los productos de las categorías "electronics" y "jewelery".
+Luego, encuentra todos los productos que NO sean de la categoría "men's clothing".
+Finalmente, muestra cuántos productos únicos hay por categoría.
+
+-SOLUCION-
+
+# 2.1 Productos de electrónica y joyería
+categorias_buscar = ["electronics", "jewelery"]
+productos_seleccion = env['ecommerce.producto_api'].search([
+    ('category', 'in', categorias_buscar)
+])
+
+print("📦 Productos en categorías seleccionadas:")
+for cat in categorias_buscar:
+    count = len(productos_seleccion.filtered(lambda p: p.category == cat))
+    print(f"  {cat}: {count} productos")
+
+# 2.2 Productos que NO son ropa de hombre
+no_men_clothing = env['ecommerce.producto_api'].search([
+    ('category', '!=', "men's clothing")
+])
+print(f"\n🚫 Productos que no son ropa de hombre: {len(no_men_clothing)}")
+
+# 2.3 Conteo por categoría
+from collections import Counter
+todas_categorias = env['ecommerce.producto_api'].search([]).mapped('category')
+conteo_cats = Counter(todas_categorias)
+
+print("\n📊 Productos por categoría:")
+for cat, count in conteo_cats.items():
+    print(f"  {cat}: {count}")
+
+🎯 EJERCICIO 3: Búsqueda por Texto
+
+Objetivo: Encontrar productos por palabras clave
+
+Enunciado:
+Busca productos que contengan la palabra "watch" en el nombre.
+Busca productos que mencionen "cotton" en la descripción.
+Busca productos que tengan "gold" en el nombre O en la descripción.
+
+-SOLUCION-
+
+# Busca productos que contengan la palabra "watch" en el nombre.
+watch = self.env['ecommerce.producto_api'].search([('name', 'ilike', 'watch')])
+print("Productos que contengan la palabra "watch: ")
+for w in watch: print(f"{w.name}")
+
+# Busca productos que mencionen "cotton" en la descripción.
+cotton = self.env['ecommerce.producto_api'].search([('description', 'ilike', 'cotton')])
+print("Busca productos que mencionen "cotton" en la descripción: ")
+for c in cotton: print(f"{c.name}")
+
+# Busca productos que tengan "gold" en el nombre O en la descripción.
+gold = self.env['ecommerce.producto_api'].search(['|', ('name', 'ilike', 'gold'), ('description', 'ilike', 'gold') ])
+print("Busca productos que tengan "gold" en el nombre O en la descripción: ")
+for g in gold: print(f"{g.name}")
+
+
+🎯 EJERCICIO 4: Productos con/sin Imagen
+
+Objetivo: Filtrar por campos vacíos
+
+Enunciado:
+
+Encuentra todos los productos que NO tienen imagen (campo image vacío).
+Encuentra todos los productos que SÍ tienen imagen.
+Compara cuántos productos hay en cada grupo.
+
+Pistas:
+    Campo vacío en Odoo es = False
+    Campo no vacío es != False
+    Usa search_count() para comparar cantidades
+
+Modelo: ecommerce.producto_api
+
+#Encuentra todos los productos que NO tienen imagen (campo image vacío).
+imagen_false = self.env['ecommerce.producto_api'].search([('image', '=', 'false')])
+conteo_false = len(imagen_false)
+
+#Encuentra todos los productos que SÍ tienen imagen.
+imagen_true = self.env['ecommerce.producto_api'].search([('image', '!=', 'false')])
+conteo_true = len(imagen_true)
+
+print(f"La cantidad de productos con imagen es {conteo_true} y sin imagen es {conteo_false}")
+
+
+🎯 EJERCICIO 5: Clientes sin Datos Completos
+
+Objetivo: Identificar clientes con información faltante
+
+Enunciado:
+Encuentra clientes que no tienen teléfono registrado.
+Encuentra clientes que no tienen dirección registrada.
+Encuentra clientes que no tienen teléfono NI dirección.
+
+Pistas:
+    Los campos son phone y address
+    Para el AND (ambos vacíos) los criterios van juntos
+    Para el OR necesitas '|'
+
+Modelo: ecommerce.cliente
+
+telefono = self.env['ecommerce.cliente'].search([('phone', '=', 'false')])
+
+direccion = self.env['ecommerce.cliente'].search([('address', '=', 'false')])
+
+tel_direc = self.env['ecommerce.cliente'].search(['|', ('address', '=', 'false'), ('phone', '=', 'false')])
+
+
+📚 EJERCICIOS PRÁCTICOS: CRUD en Odoo v18 (Shell)
+
+Ejercicio 1.1: Search Básico
+
+Objetivo: Practicar search() con diferentes operadores
+
+Enunciado:
+
+Utilizando el modelo 'ecommerce.producto_api':
+1. Busca todos los productos con precio mayor a 100€
+2. Busca productos de la categoría "electronics" con precio menor a 500€
+3. Busca los primeros 5 productos más caros
+4. Cuenta cuántos productos hay en total sin cargarlos
+
+Pistas: Usa search(), search_count(), parámetro order
+
+--SOLUCION--
+
+mayor_cien = self.env['ecommerce.producto_api'].search([('price', '>', '100')])
+print(mayor_cien)
+
+elec_quiniento = self.env['ecommerce.producto_api'].search(['&', ('price', '<', '500'), ('category', 'ilike', 'electronics')])
+print(elec_quiniento)
+
+mas_caros = self.env['ecommerce.producto_api'].search([('price', '>', '0')], limit=5, order= 'price asc')
+for m in mas_caros: print(f"{m.name}: {m.price}")
+
+produc_total = self.env['ecommerce.producto_api'].search_count([('name', '>', '0')])
+print(produc_total)
+
+
+Ejercicio 1.2: Browse por IDs
+
+Objetivo: Practicar browse() para acceso directo
+
+Enunciado:
+
+1. Obtén el producto con ID 3 usando browse()
+2. Obtén varios productos con IDs [1, 3, 5, 7]
+3. Verifica si el producto con ID 999 existe
+4. Intenta acceder a un producto que no existe y maneja el error
+
+Pistas: Usa browse(), exists(), ensure_one()
+
+enun_uno = self.env['ecommerce.producto_api'].browse(3).mapped('name')
+print(enun_uno)
+
+produc = [1, 3, 5, 7]
+enun_dos = self.env['ecommerce.producto_api'].browse(produc).mapped('name')
+print(enun_dos)
+
+enun_tres = self.env['ecommerce.producto_api'].browse(1)
+if enun_tres.exists(): 
+    print("Existe") 
+else:
+    print("No existe") 
+
+Ejercicio 1.3: Search Read Avanzado
+
+Objetivo: Usar search_read() para obtener datos específicos
+
+Enunciado:
+text
+
+1. Obtén solo nombre y precio de todos los productos de joyería
+2. Obtén los 3 productos más baratos con sus nombres y precios
+3. Busca clientes y obtén solo nombre y email de los que tienen compras
+4. Ordena los resultados por precio descendente
+
+Pistas: Parámetros fields, limit, order
+
+enun_uno = self.env['ecommerce.producto_api'].search_read(domain = [('category','ilike','jewelery')], fields=['name', 'price'])
+for j in enun_uno: print(f"Nombre: {j['name']} - Precio: {j['price']}")
+
+enun_dos = self.env['ecommerce.producto_api'].search([('price','>','0')], limit=3, order = 'price asc')
+for p in enun_dos: print(f"Nombre: {p.name} - Precio: {p.price}")
+
+enun_tres = self.env['ecommerce.compra'].search([('cliente_id','>','0')])

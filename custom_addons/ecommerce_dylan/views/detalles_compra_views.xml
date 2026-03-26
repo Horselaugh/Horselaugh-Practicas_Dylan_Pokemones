@@ -8,7 +8,6 @@
                 <form string="Detalles de Compra formulario">
                     <sheet>
                         <group>
-                            <field name="compra_id"/>
                             <field name="producto_id"/>
                             <field name="cantidad"/>
                         </group>
@@ -22,7 +21,6 @@
             <field name="model">ecommerce.detalles_compra</field>
             <field name="arch" type="xml">
                 <list string="Detalles de Compra lista">
-                    <field name="compra_id"/>
                     <field name="producto_id"/>
                     <field name="cantidad"/>
                 </list>

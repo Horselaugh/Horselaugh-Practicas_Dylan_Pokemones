@@ -42,7 +42,6 @@ class Compra(models.Model):
         for item in productos:
             producto = self.env['ecommerce.producto_api'].browse(item['producto_id'])
             DetallesCompra.create({
-                'compra_id': compra.id,
                 'producto_id': item['producto_id'],
                 'cantidad': item['cantidad'],
             })
